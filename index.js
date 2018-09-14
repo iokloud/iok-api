@@ -87,7 +87,7 @@ var dashboard = new ParseDashboard({
   }],
   "users": [{
     "user": process.env.dashboardUser || "admin",
-    "pass": process.env.dashboardPass || "dashboard"
+    "pass": process.env.dashboardPass || "admin"
   }]
 }, allowInsecureHTTP);
 
@@ -107,7 +107,7 @@ app.use('/dashboard', dashboard);
 
 // Parse Server plays nicely with the rest of your web routes
 app.get('/', function (req, res) {
-  res.status(200).send('I dream of being a website.');
+  res.status(200).send('I dream of being an IoT website.');
 });
 
 // There will be a test page available on the /test path of your server url
